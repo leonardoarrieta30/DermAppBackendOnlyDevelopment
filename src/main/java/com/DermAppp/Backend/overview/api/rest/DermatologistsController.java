@@ -41,9 +41,11 @@ public class DermatologistsController {
         return new ResponseEntity<>(mapper.toResource(dermatologistService.create(mapper.toModel(resource))), HttpStatus.CREATED);
     }
 
+    @PutMapping("{dermatologistId}")
     public DermatologistResource updateDermatologist(@PathVariable Long dermatologistId, @RequestBody UpdateDermatologistResource resource){
-        return mapper.toResource(dermatologistService.update(dermatologistId, mapper.toModel(resource)));
+        return mapper.toResource(dermatologistService.update(dermatologistId,mapper.toModel(resource)));
     }
+
 
     @DeleteMapping("{dermatologistId}")
     public ResponseEntity<?> deleteDermatologist(@PathVariable Long dermatologistId){
