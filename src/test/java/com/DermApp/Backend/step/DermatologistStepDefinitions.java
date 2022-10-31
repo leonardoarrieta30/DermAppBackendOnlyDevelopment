@@ -58,7 +58,7 @@ public class DermatologistStepDefinitions {
     }
 
     @And("A Dermatologist Resource is included in Response Body, with values {string}, {int}, {string}, {string}, {string}")
-    public void aDermatologistResourceIsIncludedInResponseBodyWithValues(String name, int age, String password, String address, String description) throws com.fasterxml.jackson.core.JsonProcessingException {
+    public void aDermatologistResourceIsIncludedInResponseBodyWithValues(String name, int age, String password, String address, String description){
         DermatologistResource expectedResource = new DermatologistResource()
                 .withName(name)
                 .withAge(age)
