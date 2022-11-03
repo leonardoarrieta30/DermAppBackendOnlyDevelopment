@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.overview</groupId>
     <artifactId>backend-DermApp</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>backend-DermApp</name>
-    <description>backend-DermApp</description>
+    <description>DermAPP Backend RESTful API, made with Java and Spring Boot, Applying domain-driven architecture approach.</description>
     <properties>
         <java.version>17</java.version>
     </properties>
