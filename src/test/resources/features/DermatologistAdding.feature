@@ -11,3 +11,10 @@ Feature: Dermatologist Adding
       When A post Request is sent with values "John Doe", 36, "123456789", "Anywhere", "This is a Description"
       Then A Response is received with Status 200
       And A Dermatologist Resource is included in Response Body, with values "John Doe", 36, "123456789", "Anywhere", "This is a Description"
+
+    @dermatologist-duplicated
+    Scenario: Add Dermatologist with existing Name
+      Given A Dermatologist Resource with values "John Doe", 36, "123456789", "Anywhere", "This is a Description" is already stored
+      When A post Request is sent with values "John Doe", 36, "123456789", "Anywhere", "This is a Description"
+      Then A Response is received with Status 400
+      And A Message is included in Response Body, with values "Not all constraints satisfied for Dermatologist: An Student with the same name already exists."
